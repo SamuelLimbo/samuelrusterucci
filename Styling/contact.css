@@ -1,0 +1,18 @@
+#rectangle{
+    width:0px;
+    height:110px;
+    background:white;
+}
+
+a 
+{ 
+    text-align: center;
+    font-family: CompMod;
+    margin-top: 20px;
+}
+
+a.link
+{
+    color: black;
+    text-decoration: none;
+}
