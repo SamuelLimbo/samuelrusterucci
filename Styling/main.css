@@ -6,8 +6,9 @@ body
     background-attachment: fixed;
     background-size: cover;
 
-    transform: translateY(+150%);
+    transform: translateY(+0%);
     text-align: center;
+    margin:0;
 }
 
 @font-face
@@ -30,6 +31,18 @@ h1
 p
 {
     font-family: CompMod;
+    margin: 10px;
+}
+
+#rectangle{
+    width:0px;
+    height:70px;
+    background:white;
+}
+
+.who_am_i
+{
+    margin-top: 42px;
 }
 
 .navbar ul
@@ -45,12 +58,12 @@ p
     text-decoration: none;
     font-family: CompMod;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 .navbar a:hover
 {
-    color: blue;
+    color: #3A54A4;
 }
 
 .navbar li
@@ -58,8 +71,4 @@ p
     display: inline-block;
 }
 
-.who_am_i 
-{
-    margin-top: 31px;
-}
 
