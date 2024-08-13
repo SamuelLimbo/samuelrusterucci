@@ -27,11 +27,11 @@ a.references
 
 .content {
     animation: TransitionIn 0.5s;
-    width: 83%;
+    width: 73%;
     position: relative;
     left: 50%; 
     transform: translateX(-50%);
-    padding: 10px; 
+    padding: 30px; 
     overflow-y: auto; 
     max-height: 75vh; 
     background-color: rgba(255, 255, 255, 0.95); 
@@ -47,7 +47,7 @@ img {
 
     p.justified_text
     {
-        font-size: 19px;
+        font-size: 17px;
         text-align: justify;
         animation: TransitionIn 1s;
     }
@@ -63,6 +63,20 @@ img {
         text-decoration: none;
         font-size:17px;
         animation: TransitionIn 1s;
+    }
+
+    .content {
+        animation: TransitionIn 0.5s;
+        width: 83%;
+        position: relative;
+        left: 50%; 
+        transform: translateX(-50%);
+        padding: 15px; 
+        overflow-y: auto; 
+        max-height: 75vh; 
+        background-color: rgba(255, 255, 255, 0.95); 
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
     }
 
 }
