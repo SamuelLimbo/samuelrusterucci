@@ -1,18 +1,43 @@
-#rectangle{
-    width:0px;
-    height:110px;
-    background:white;
-}
-
 a 
 { 
     text-align: center;
     font-family: CompMod;
     margin-top: 20px;
+    font-size: 21px;
+}
+
+#mail {
+    animation: TransitionIn 1s;
+    text-align: center;
+    font-family: CompMod;
+    margin-top: 151px;
+    font-size: 21px;
 }
 
 a.link
 {
     color: black;
     text-decoration: none;
+}
+
+@keyframes TransitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@media (max-width: 700px) {
+    a 
+    { 
+        text-align: center;
+        font-family: CompMod;
+        margin-top: 20px;
+        font-size: 19px;
+    }
 }
