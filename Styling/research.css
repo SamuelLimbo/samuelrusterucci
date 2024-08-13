@@ -1,23 +1,97 @@
-p.PM_M31M33
-{
-    text-align: justify;
-    margin: 20px;
+.image_container {
+    padding: 7%;
+    display: flex; /* Align images side by side */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    gap: 5%; /* Add space between the images */
 }
 
-.content {
-    width: 73%;
-    position: absolute; /* Position the content absolutely within the background */
-    top: 10; /* Position the content at the top of the background */
-    left: 50%; /* Position the content in the center horizontally */
-    transform: translateX(-50%); /* Center the content horizontally */
-    padding: 20px; /* Add padding as needed */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds container height */
-    max-height: 70vh; /* Limit the height of the content to 80% of the viewport height */
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
-    border-radius: 5px; /* Add rounded corners */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+.image {
+    display: block; 
+    max-width: 500px; 
+    max-height: 250px;
+    border-radius: 21px;
+    overflow: hidden;
+
+    position: relative; /* Ensure the text is positioned relative to this container */
+    display: inline-block;
+
+    width: 100%; /* Ensure image covers container width */
+    height: calc(width * 0.5); /* Maintain aspect ratio */
+
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
 }
 
-img {
-    width: 95%; /* Set the image width to 100% of its containing block */
+.image img {
+    width: 100%; /* Ensure the images don't overflow their container */
+    height: auto;
+    border-radius: 21px;
+    object-fit: cover;
+    transition:0.75s;
+
+    display: block; /* Prevents small gaps below the image */
+}
+
+.image:hover img{
+    transform: scale(1.2);
+}
+
+.text-overlay {
+    font-family: CompMod;
+    position: absolute;
+    top: 13px; 
+    right: 13px; 
+    text-align: right;
+    color: white;
+    font-size: 25px;
+}
+
+/* Styles for phones */
+@media (max-width: 700px) {
+    .image_container {
+        padding: 3%; 
+        display: flex; /* Align images side by side */
+        flex-direction: column;
+        justify-content: center; /* Center images horizontally */
+        align-items: center; /* Center images vertically */
+    }
+    
+    .image {
+        width: 400px;
+        height: 200px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        margin-bottom: 20px; 
+    
+        position: relative; /* Ensure the text is positioned relative to this container */
+        display: inline-block;
+    }
+    
+    .image img {
+        width: 50%; /* Ensure the images don't overflow their container */
+        height: 50%;
+        border-radius: 15px;
+        object-fit: cover;
+        transition:0.75s;
+    
+        display: block; /* Prevents small gaps below the image */
+        width: 100%; /* Ensures the image scales to the container */
+        height: auto;
+    }
+    
+    .image:hover img{
+        transform: scale(1.2);
+    }
+    
+    .text-overlay {
+        font-family: CompMod;
+        position: absolute;
+        top: 13px; 
+        right: 13px; 
+        text-align: right;
+        color: white;
+        font-size: 21px;
+    }
 }
