@@ -7,17 +7,19 @@
 }
 
 .image {
-    display: block; 
     max-width: 500px; 
     max-height: 250px;
     border-radius: 21px;
     overflow: hidden;
 
     position: relative; /* Ensure the text is positioned relative to this container */
-    display: inline-block;
 
     width: 100%; /* Ensure image covers container width */
-    height: calc(width * 0.5); /* Maintain aspect ratio */
+    aspect-ratio: 2.3 / 1;
+
+    display: flex; /* Apply flexbox to .image */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center;
 
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -58,15 +60,19 @@
     }
     
     .image {
-        width: 400px;
-        height: 200px;
+        width: 90%;
+        /* height: 200px; */
+        aspect-ratio: 2.5 / 1;
         border-radius: 15px;
         overflow: hidden;
 
         margin-bottom: 20px; 
+
+        display: flex; /* Apply flexbox to .image */
+        justify-content: center; /* Horizontally center the image */
+        align-items: center;
     
         position: relative; /* Ensure the text is positioned relative to this container */
-        display: inline-block;
     }
     
     .image img {
