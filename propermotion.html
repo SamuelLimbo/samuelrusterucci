@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <link rel="shortcut icon" type="x-icon" href="Images/Welcome.png">
     <title>Samuel Rusterucci</title>
     <link rel="stylesheet" href="Styling/main.css">
     <link rel="stylesheet" href="Styling/propermotion.css">
@@ -32,7 +31,7 @@
          to address this size issue and make an estimate using stars from the entire galaxy, albeit with reduced accuracy (black dot). Finally, in 2021, <span class="tooltip"> Salomon et al. <span class="descriptionBox"> <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.2592S/abstract" target="_blank">ADS</a> </span> </span>
          inferred M31's motion using <em>Gaia</em> EDR3 on a sample of blue and red stars (in a daring way represented in blue and red, respectively). As far as we know, there is no reason to believe that M31 is being stretched or disrupted by unknown forces that would cause blue and red stars to behave differently. Thus, the question I sought to answer is: why do we observe these inconsistencies? </p>
 
-        <img src="Images/Result_M31M33.png" alt="Proper motion of the Andromeda Galaxy (M31)">
+         <a href="Images/PM_M31/Figure_1.pdf" target="_blank"><img class="Fig1" src="Images/PM_M31/Figure_1.png" alt="Proper motion of the Andromeda Galaxy (M31)"></a>
 
         <p class="justified_text"> Note: all results are presented in a heliocentric reference frame with the proper motions along the right ascension (x) and declination direction (y). The black pentagon represents a strictly radial motion of M31 towards the Milky Way.</p>
         
@@ -42,22 +41,32 @@
          by applying to the <em>Gaia</em> DR3 data a series of spatial, colour-magnitude, and proper motion cuts as detailed in their article. The spatial distribution and the corresponding colour-magnitude diagram (CMD) of the remaining stars are shown in the middle and right-hand panels of the figure below, respectively. The stars within the hashed region can be considered contaminants. The left-hand panel displays the distribution of quasars used to establish the <em>Gaia</em> celestial reference frame (CRF), shown both before (grey dots) and after (black dots) incorporating additional quasars from the latest <em>Gaia</em> catalogue of extragalactic objects (<span class="tooltip"> Gaia Collaboration et al. 2023a <span class="descriptionBox"> <a href="https://ui.adsabs.harvard.edu/abs/2023A%26A...674A..41G/abstract" target="_blank">ADS</a> </span> </span>). 
          The newly added quasars significantly increase the central density, which was previously low due to the CRF being constructed from different catalogues, not all of which being equally reliable in heavily contaminated regions such as M31. </p>
 
+        <a href="Images/PM_M31/Figure_2.pdf" target="_blank"><img class="Fig2" src="Images/PM_M31/Figure_2.png" alt="Star and quasar samples" ></a>
+
         <p class="title"> Inference method </p>
 
         <p class="justified_text"> The global motion of the galaxy is inferred by assuming it is the sum of two probabilistic models: one representing the true population of M31 stars and the other representing contamination, both modelled as two-dimensional Gaussians. More details on the method are provided in Rusterucci et al. (in prep.). The intrinsic motion of the stars within M31 is accounted for using a disc model (left-hand panel of the figure below), which we subtract from the measured <em>Gaia</em> proper motions (right-hand panel of the same figure). In the case of quasars, no disc model is needed, as they are considered motionless. </p>
+
+        <a href="Images/PM_M31/Figure_3.pdf" target="_blank"><img class="Fig3" src="Images/PM_M31/Figure_3.png" alt="Gaia proper motion measurements"></a>
 
         <p class="title"> Correction for the motion of the reference</p>
 
         <p class="justified_text"> The quasars from the <em>Gaia</em> reference frame exhibit small systematic motions on the order of a few tenths of microarcseconds per year (see Figure 13 from <span class="tooltip"> Lindegren et al. 2021b <span class="descriptionBox"> <a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...649A...2L/abstract" target="_blank">ADS</a> </span> </span>).
          To address this, I created a grid covering M31 and its outskirts, with bins of sizes 72" by 72". The motion of all quasars within a 2.5deg radius around each bin centre is then inferred and smoothed using a Gaussian kernel with a standard deviation of 5 pixels, resulting in the correction maps presented below along the right ascension and declination directions. While being aware of the correlations introduced by this method, I chose to use it for simpler and more interpretable results. The top row shows the correction maps using the <em>Gaia</em> DR3, while the bottom row shows the maps using the DR2. It is clear that the DR3 represents a significant improvement over the DR2, as the latter maps are not centred on 0 and exhibit a wider range of values.</p>
 
+        <a href="Images/PM_M31/Figure_4.pdf" target="_blank"><img class="Fig4" src="Images/PM_M31/Figure_4.png" alt="Correction from the background reference frame"></a>
+
         <p class="title"> Quadrant analysis </p>
 
         <p class="justified_text"> Instead of inferring the motion of all the blue and red stars together, we infer the motion for stars in four different quadrants, effectively reducing our sample size by a factor of four. The motivation for this approach comes from the similarity of our results to previous ones, even after applying the correction maps as zero-point offsets as previously discussed. The left-hand panel of the following figure shows the inferred motion for each quadrant (in low opacity) along with the final combined measurement (in clear) for both the blue and red samples. Assuming the four quadrants are independent (though this is not entirely the case due to correlations introduced by the correction maps), we can statistically infer the mean motion, along with the statistical and systematic uncertainties for each quadrant. The statistical uncertainties, which arise from the "noise" in the data, are represented as solid error bars in the figure below. The systematic uncertainties are shown as dashed error bars and can be interpreted as the uncertainties required to make the results compatible with one another. The right-hand panel displays these new DR3-based results in the context of previous studies. Due to the newly determined larger systematic uncertainties, the blue and red samples are now compatible with each other.</p>
         
+        <a href="Images/PM_M31/Figure_5.pdf" target="_blank"><img class="Fig5" src="Images/PM_M31/Figure_5.png" alt="Proper motion of the Andromeda Galaxy (M31)"></a>
+        
         <p class="title"> What can we conclude? </p>
 
         <p class="justified_text"> Re-doing the entire analysis using <em>Gaia</em> DR2 data, we observe even greater incompatibilities between the quadrants, as shown in the following figure (low opacity). The final results differ significantly and are only made compatible due to the large, dominant systematic uncertainties. This suggests that previous studies may have underestimated the magnitude of these systematic effects, and highlights that we aim to infer motions that approach <em>Gaia</em>'s current capabilities. Nonetheless, the substantial improvement between the two data releases is reassuring. If a similar improvement is observed between the DR3 and the DR4, we could achieve measurement uncertainties comparable to those of the HST, but on a sample that fully covers M31.</p>
+
+        <a href="Images/PM_M31/Figure_6.pdf" target="_blank"><img class="Fig6" src="Images/PM_M31/Figure_6.png" alt="Proper motion of the Andromeda Galaxy (M31) compared to the results obtained using the Gaia DR2"></a>
 
         <p class="title"> Reference </p>
 
