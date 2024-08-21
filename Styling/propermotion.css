@@ -39,11 +39,66 @@ a.references
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
 
-img {
-    width: 95%;
+img.Fig1 {
+    width: 35%;
 }
 
+img.Fig2 {
+    width: 90%;
+}
+
+img.Fig3 {
+    width: 70%;
+}
+
+img.Fig4 {
+    width: 50%;
+}
+
+img.Fig5 {
+    width: 70%;
+}
+
+img.Fig6 {
+    width: 35%;
+}
+
+.pdf-container {
+    margin-top: 20px;
+    width: 750px;
+    height: 750px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none; /* Hidden by default */
+}
+
+
+
 @media (max-width: 700px) {
+
+    img.Fig1 {
+        width: 90%;
+    }
+    
+    img.Fig2 {
+        width: 90%;
+    }
+    
+    img.Fig3 {
+        width: 90%;
+    }
+    
+    img.Fig4 {
+        width: 90%;
+    }
+    
+    img.Fig5 {
+        width: 90%;
+    }
+    
+    img.Fig6 {
+        width: 90%;
+    }
 
     p.justified_text
     {
