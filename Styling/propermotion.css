@@ -72,7 +72,13 @@ img.Fig6 {
     display: none; /* Hidden by default */
 }
 
-
+.content lii a {
+    text-decoration: none;
+    color: #3A54A4;
+    font-family: CompMod;
+    display: inline-block;
+    font-size: 21px;
+}
 
 @media (max-width: 700px) {
 
