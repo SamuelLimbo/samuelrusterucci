@@ -89,3 +89,8 @@
 #output {
     margin-bottom: 40px;
 }
+
+.citation-link {
+    color: #3A54A4;
+    text-decoration: none;
+}
