@@ -42,7 +42,7 @@ async function plotConfiguration(config) {
 
     for (const filter of filters) {
 
-        const response = await fetch("https://raw.githubusercontent.com/SamuelLimbo/samuelrusterucci/main/Data/" + filter + ".txt");
+        const response = await fetch("./Data/" + filter + ".txt");
 
         const text = await response.text();
 
