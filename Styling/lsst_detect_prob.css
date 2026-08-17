@@ -50,14 +50,17 @@
 }
 
 /* Hide the number input spinner arrows */
+.calc-input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
 .calc-input::-webkit-outer-spin-button,
 .calc-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    appearance: none;
     margin: 0;
-}
-
-.calc-input[type="number"] {
-    -moz-appearance: textfield;
 }
 
 .calc-inputs {
