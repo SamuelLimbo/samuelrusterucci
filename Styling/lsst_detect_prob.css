@@ -49,6 +49,17 @@
     opacity: 1;
 }
 
+/* Hide the number input spinner arrows */
+.calc-input::-webkit-outer-spin-button,
+.calc-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calc-input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .calc-inputs {
     display: flex;
     justify-content: center;
