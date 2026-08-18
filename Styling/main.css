@@ -213,3 +213,7 @@ p {
     color: #3A54A4;
     text-decoration: none;
 }
+
+.smallcaps {
+    font-variant: small-caps;
+}

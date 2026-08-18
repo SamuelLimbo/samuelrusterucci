@@ -1,24 +1,20 @@
-p.justified_text
-{
+p.justified_text {
     font-size: 21px;
     text-align: justify;
     margin: 21px;
     animation: TransitionIn 1s;
 }
 
-p.title
-{
+p.title {
     font-size: 30px;
 }
 
-p.references
-{
+p.references {
     text-align: left;
     margin: 7px;
 }
 
-a.references
-{
+a.references {
     color: #3A54A4;
     text-decoration: none;
     font-size: 21px;
@@ -29,14 +25,14 @@ a.references
     animation: TransitionIn 0.5s;
     width: 73%;
     position: relative;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
-    padding: 30px; 
-    overflow-y: auto; 
-    max-height: 75vh; 
-    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 30px;
+    overflow-y: auto;
+    max-height: 75vh;
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 img.Fig1 {
@@ -69,7 +65,8 @@ img.Fig6 {
     height: 750px;
     background-color: white;
     border: 1px solid #ccc;
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
 }
 
 .content lii a {
@@ -85,44 +82,41 @@ img.Fig6 {
     img.Fig1 {
         width: 90%;
     }
-    
+
     img.Fig2 {
         width: 90%;
     }
-    
+
     img.Fig3 {
         width: 90%;
     }
-    
+
     img.Fig4 {
         width: 90%;
     }
-    
+
     img.Fig5 {
         width: 90%;
     }
-    
+
     img.Fig6 {
         width: 90%;
     }
 
-    p.justified_text
-    {
+    p.justified_text {
         font-size: 17px;
         text-align: justify;
         animation: TransitionIn 1s;
     }
 
-    p.title
-    {
-        font-size:25px;
+    p.title {
+        font-size: 25px;
     }
 
-    a.references
-    {
+    a.references {
         color: #3A54A4;
         text-decoration: none;
-        font-size:17px;
+        font-size: 17px;
         animation: TransitionIn 1s;
     }
 
@@ -130,14 +124,14 @@ img.Fig6 {
         animation: TransitionIn 0.5s;
         width: 83%;
         position: relative;
-        left: 50%; 
+        left: 50%;
         transform: translateX(-50%);
-        padding: 15px; 
-        overflow-y: auto; 
-        max-height: 75vh; 
-        background-color: rgba(255, 255, 255, 0.95); 
+        padding: 15px;
+        overflow-y: auto;
+        max-height: 75vh;
+        background-color: rgba(255, 255, 255, 0.95);
         border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
 
 }

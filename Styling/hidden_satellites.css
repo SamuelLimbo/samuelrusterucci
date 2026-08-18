@@ -1,0 +1,104 @@
+.content {
+    animation: TransitionIn 0.5s;
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    overflow-y: auto;
+    max-height: 50vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Research-style entries: image + text rectangle */
+.research-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    width: 95%;
+    margin: 20px auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    animation: TransitionIn 1s;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.research-item:hover {
+    opacity: 0.75;
+}
+
+.research-item:last-child {
+    border-bottom: none;
+}
+
+.research-item img {
+    width: 30%;
+    max-width: 260px;
+    flex-shrink: 0;
+}
+
+.research-item .research-text {
+    flex: 1;
+}
+
+.research-item .research-text h3 {
+    font-family: CompMod;
+    font-size: 24px;
+    margin: 0 0 8px 0;
+    color: #000000;
+}
+
+.research-item .research-text p {
+    font-family: CompMod;
+    font-size: 19px;
+    text-align: justify;
+    margin: 0 0 10px 0;
+}
+
+.research-item.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 700px) {
+
+    .content {
+        animation: TransitionIn 0.5s;
+        width: 83%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
+        overflow-y: auto;
+        max-height: 75vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .research-item,
+    .research-item.reverse {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .research-item img {
+        width: 70%;
+        max-width: none;
+    }
+
+    .research-item .research-text h3 {
+        font-size: 19px;
+    }
+
+    .research-item .research-text p {
+        font-size: 15px;
+    }
+
+}
