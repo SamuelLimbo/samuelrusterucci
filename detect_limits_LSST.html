@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Samuel Rusterucci</title>
+    <link rel="stylesheet" href="Styling/main.css">
+    <link rel="stylesheet" href="Styling/propermotion.css">
+    <link rel="stylesheet" href="Styling/detect_limits_LSST.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]
+    });"></script>
+</head>
+
+<body>
+    <h1>Expected detection limits in the LSST</h1>
+    <nav class="navbar">
+        <ul>
+            <li> <a href="index.html"> Home </a> </li>
+            <!-- target="_blank" after the a, this allows to open the link in a new page-->
+            <li> <a href="research.html"> Research </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </ul>
+    </nav>
+
+    <p> </p>
+    <div class="content">
+
+        <lii> <a href="https://arxiv.org/abs/2410.18180" target="_blank"> &#x2015; Rusterucci et al. (2026) &#x2015;
+            </a>
+        </lii>
+
+        <p class="justified_text"> Systematic searches for ultra-faint Milky Way satellite galaxies essentially consist
+            of local density estimators coupled with colour-magnitude cuts following stellar isochrone tracks. These
+            selections are typically performed in 2D colour-magnitude spaces and have rarely, if ever, been extended to
+            higher-dimensional spaces. Moreover, these studies typically only consider <em>g</em>-, <em>r</em>-, and
+            <em>i</em>-band photometry, disregarding the use of the shallower but metal-sensitive <em>u</em> band.
+        </p>
+
+        <p class="justified_text"> We generated dwarf galaxies and injected them into the <a
+                href="https://data.lsstdesc.org/" target="_blank" class="citation-link">LSST DC2</a> simulation. We then
+            tried to recover them using <a href="erose.html" target="_blank" class="citation-link"><span
+                    class="smallcaps">erose</span></a> for different combinations of photometric bands. We found that
+            including the <em>u</em> band or combining the <em>gri</em> bands (into a 3D space) both have a slight, but
+            positive impact on the final recovery fractions, especially for the most extended objects for the former.
+        </p>
+
+        <p class="justified_text"> This is shown in the plot below which can be understood as follows: each
+            pixel of the first panel contains ten dwarf galaxies of different absolute magnitudes (<span
+                style="font-size: 17px;">$M_V$</span>) and half-light radius (<span
+                style="font-size: 17px;">$r_h$</span>). At the bottom left (low <span
+                style="font-size: 17px;">$M_V$</span>, low <span style="font-size: 17px;">$r_h$</span>), objects are
+            dense and bright whereas at the top right (high <span style="font-size: 17px;">$M_V$</span>, high <span
+                style="font-size: 17px;">$r_h$</span>), they are extended and faint. The colours of the pixels
+            correspond to the fraction of the ten dwarf galaxies that have been recovered while the different panels
+            represent different distance shifts. The different coloured lines represent the 50% recovery fractions for
+            the different photometric configuration (the more shifted to the right the better, as fainter galaxies can
+            be probed). As previously stated, configurations including the <em>u</em> band provide slightly
+            better results, especially for the most extended objects (<span
+                style="font-size: 17px;">$\log_{10}(r_h/\textrm{pc}) \gtrsim 2$</span>). The configuration including the
+            <em>gri</em> bands slightly outperforms the configuration only including <em>gr</em>.
+        </p>
+
+        <a href="Images/detect_limits_LSST/recovery_fraction_all.pdf" target="_blank"><img class="Fig1"
+                src="Images/detect_limits_LSST/recovery_fraction_all.png" alt="Detection limits in LSST"></a>
+
+        <p class="justified_text"> The background 2D histograms have been fitted with 2D sigmoids following the method
+            described in the appendix of the paper. If you are curious to know if your favourite dwarf galaxy will be
+            observable with LSST (which it probability will if inside the footprint), you can use the <a
+                href="detect_prob_calculator.html" target="_blank" class="citation-link">detection probability
+                calculator</a>.
+        </p>
+
+        <p class="justified_text"> Another way to interpret those results is to estimate the number of satellites that
+            will be recovered by LSST. We generated 10 000 mock Milky Way satellite populations (generated from the
+            empirical model of <a href="https://scixplorer.org/abs/2026ApJ..1000...87T/abstract" target="_blank"
+                class="citation-link">Tan et al. 2026</a>) which we integrated under our observational selection
+            functions. We found that configurations including <em>ug</em> recover 64.1<span
+                style="font-size: 17px;">$^{+6.3}_{-6.0}$</span>% of injected satellites, against 62.5<span
+                style="font-size: 17px;">$^{+6.6}_{-6.5}$</span>% for <em>gr</em> and 63.5<span
+                style="font-size: 17px;">$^{+6.4}_{-6.5}$</span>% for <em>gri</em>. Although this difference is not
+            statistically significant, it suggests that the <em>u</em> band, and the inclusion of more photometric bands
+            can both provide additional information and may slightly improve recovery performances.
+        </p>
+
+    </div>
+    <div class="bottom-shape"></div>
+    <div class="rectangle"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Samuel Rusterucci</title>
+    <link rel="stylesheet" href="Styling/main.css">
+    <link rel="stylesheet" href="Styling/propermotion.css">
+    <link rel="stylesheet" href="Styling/erose.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]
+    });"></script>
+</head>
+
+<body>
+    <h1>The <span class="smallcapstitle">erose</span> algorithm</h1>
+    <nav class="navbar">
+        <ul>
+            <li> <a href="index.html"> Home </a> </li>
+            <!-- target="_blank" after the a, this allows to open the link in a new page-->
+            <li> <a href="research.html"> Research </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </ul>
+    </nav>
+
+    <p> </p>
+    <div class="content">
+
+        <lii> <a href="https://github.com/samuelrusterucci/erose" target="_blank"> &#x2015; Link to the GitHub &#x2015;
+            </a>
+        </lii>
+
+        <p class="justified_text"> The algorithm is entirely Python-based. Please feel free to download it following the
+            intructions from the GitHub link above. A full description of the algorithm is provided in <a
+                href="https://arxiv.org/abs/2410.18180" target="_blank" class="citation-link">Rusterucci et al.
+                (2026)</a> but it can be summarised by Figure 1 of the article:
+        </p>
+
+        <a href="Images/erose/how_erose.pdf" target="_blank"><img class="Fig1" src="Images/erose/how_erose.png"
+                alt="Detection limits in LSST"></a>
+
+        <p class="justified_text"> The algorithm begins by weighting stars based on their consistency with a theoretical
+            or empirical isochrone, a procedure repeated for different distance shifts (<span
+                style="font-size: 17px;">$\mathcal{W}_d$</span>). After spatially binning the
+            weighted stars, we obtain a density map for each distance (<span
+                style="font-size: 17px;">$\mathcal{M}_d$</span>). <span class="smallcaps">erose</span> then convolves
+            these maps with Gaussian
+            kernels of different sizes with the aim of enhancing overdensities of varying angular scales (<span
+                style="font-size: 17px;">$\mathcal{M}_{d, k}$</span>). To evaluate
+            the significance of a given pixel in any of these maps, a gamma distribution is fitted to the distribution
+            of neighbouring pixels (contained within a surrounding annulus), and the value of the cumulative
+            distribution function of the central pixel is used as part of our significance metric. Repeating this
+            procedure for every pixel of every map, we obtain our intermediate significance maps (<span
+                style="font-size: 17px;">$\mathcal{S}_{d, k}$</span>). Finally, by taking the
+            maximum pixel value across all maps, we obtain our final significance map (<span
+                style="font-size: 17px;">$\mathcal{S}_\mathrm{max}$</span>), from which overdensities can be
+            extracted and characterised.
+        </p>
+
+    </div>
+    <div class="bottom-shape"></div>
+    <div class="rectangle"></div>
+
+</body>
+
+</html>

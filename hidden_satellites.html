@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Samuel Rusterucci</title>
+    <link rel="stylesheet" href="Styling/main.css">
+    <link rel="stylesheet" href="Styling/propermotion.css">
+    <link rel="stylesheet" href="Styling/hidden_satellites.css">
+</head>
+
+<body>
+    <h1>Searching for hidden satellites of the Milky Way</h1>
+    <nav class="navbar">
+        <ul>
+            <li> <a href="index.html"> Home </a> </li>
+            <!-- target="_blank" after the a, this allows to open the link in a new page-->
+            <li> <a href="research.html"> Research </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <a class="research-item" href="erose.html">
+            <img src="Images/erose_logo.png" alt="Description of image 1">
+            <div class="research-text">
+                <h3>The <span class="smallcaps">erose</span> algorithm</h3>
+                <p>
+                    <span class="smallcaps">erose</span> (Enhancing Rapidly Overdensities of Sources with Ease) is an
+                    automated algorithm searching for resolved overdensities of stars. It was designed to be fast and
+                    easy to use by anyone
+                    in any survey for any input combination of photometric bands. Its two main modules allow: 1) to
+                    weight stars in any (multi-)colour-magnitude space, 2) to spatially enhance stellar overdensities.
+                </p>
+            </div>
+        </a>
+
+        <a class="research-item reverse" href="detect_limits_LSST.html">
+            <img src="Images/dwarf.png" alt="Description of image 1">
+            <div class="research-text">
+                <h3>Expected detection limits in the LSST</h3>
+                <p>
+                    This page summarises the results of Rusterucci et al. (2026), a paper that focuses on the impact of
+                    combining different photometric bands on the detectability of Milky Way satellites using the LSST.
+                    The main result shows that including the shallower, but metal-sensitive <em>u</em> band, positively
+                    impact our detection limits, especially for the most extended satellites.
+                </p>
+            </div>
+        </a>
+
+        <!-- <a class="research-item" href="detect_prob_calculator.html">
+            <img src="Images/erose_logo.png" alt="Description of image 1">
+            <div class="research-text">
+                <h3>Detection probability calculator</h3>
+                <p>
+                    A script returns the detection probability of a satellite of given properties.
+                    For now, only the detection limits reported in Rusterucci et al. (2026) have been implemented, but I
+                    would be happy to implement more in the future.
+                </p>
+            </div>
+        </a> -->
+
+    </div>
+    <div class="bottom-shape"></div>
+    <div class="rectangle"></div>
+
+</body>
+
+</html>

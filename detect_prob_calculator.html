@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Samuel Rusterucci</title>
+    <link rel="stylesheet" href="Styling/main.css">
+    <link rel="stylesheet" href="Styling/propermotion.css">
+    <link rel="stylesheet" href="Styling/detect_prob_calculator.css">
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']]
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+    <h1>Detection probability calculator</h1>
+    <nav class="navbar">
+        <ul>
+            <li> <a href="index.html"> Home </a> </li>
+            <!-- target="_blank" after the a, this allows to open the link in a new page-->
+            <li> <a href="research.html"> Research </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </ul>
+    </nav>
+
+    <p> </p>
+    <div class="content">
+        <!-- <p>Detection probabilities are calculated according to the analytical model of
+            <a href="https://arxiv.org/abs/2410.18180" target="_blank" class="citation-link">Rusterucci et al.
+                (2026)</a>.
+        </p> -->
+        <p>Please insert the properties of your satellite and choose a photometric configuration:</p>
+
+        <div class="calc-inputs">
+            <input type="number" id="distance" class="calc-input" placeholder="Distance (kpc)">
+            <input type="number" id="M_V" class="calc-input" placeholder="Absolute magnitude">
+            <input type="number" id="r_h" class="calc-input" placeholder="Half-light radius (pc)">
+        </div>
+
+        <input type="hidden" id="phot_config" value="">
+
+        <div class="photometric-selector">
+            <button type="button" class="phot-option" data-value="gr">gr</button>
+            <button type="button" class="phot-option" data-value="ri">ri</button>
+            <button type="button" class="phot-option" data-value="gri">gri</button>
+            <button type="button" class="phot-option" data-value="ug">ug</button>
+            <button type="button" class="phot-option" data-value="ugr">ugr</button>
+            <button type="button" class="phot-option" data-value="ugri">ugri</button>
+        </div>
+
+        <input type="hidden" id="phot_config">
+
+        <p id="output"></p>
+
+        <p>Note: the results are computed according to the results of
+            <a href="https://arxiv.org/abs/2410.18180" target="_blank" class="citation-link">Rusterucci et al.
+                (2026)</a>.
+        </p>
+
+        <p>As fun as entering values manually can be, you can also use this
+            <a href="https://arxiv.org/abs/2410.18180" target="_blank" class="citation-link">notebook</a>
+            to provide arrays of values instead.
+        </p>
+
+    </div>
+    <div class="bottom-shape"></div>
+    <div class="rectangle"></div>
+
+    <script src="JavaScript/detect_prob_calculator.js"></script>
+
+</body>
+
+</html>
