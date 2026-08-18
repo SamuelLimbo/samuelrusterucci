@@ -11,10 +11,10 @@ const configurations = {
 
 
 const colours = {
-    u: "purple",
-    g: "green",
-    r: "red",
-    i: "blue"
+    u: "#35351B",
+    g: "#9A5653",
+    r: "#E99F65",
+    i: "#F3CF71"
 };
 
 
@@ -42,7 +42,7 @@ async function plotConfiguration(config) {
 
     for (const filter of filters) {
 
-        const response = await fetch("./Data/" + filter + ".txt");
+        const response = await fetch("https://raw.githubusercontent.com/SamuelLimbo/samuelrusterucci/refs/heads/main/Data/" + filter + ".txt");
 
         const text = await response.text();
 
@@ -72,7 +72,8 @@ async function plotConfiguration(config) {
             name: filter,
 
             line: {
-                color: colours[filter]
+                color: colours[filter],
+                width: 3
             }
         });
     }
@@ -80,14 +81,17 @@ async function plotConfiguration(config) {
 
     const layout = {
 
-        title: config,
+        // title: config,
 
         xaxis: {
-            title: "Wavelength"
+            title: "Wavelength",
+            visible: false
         },
 
         yaxis: {
-            title: "Transmission"
+            title: "Transmission",
+            visible: false,
+            range: [0.01, 0.7]
         }
 
     };
