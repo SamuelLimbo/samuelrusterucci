@@ -214,6 +214,24 @@ p {
     text-decoration: none;
 }
 
+.citation-link_design {
+    color: white;
+    text-decoration: none;
+}
+
 .smallcaps {
     font-variant: small-caps;
+}
+
+.inspired-by {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: FrizQuad;
+    font-size: 13px;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 6;
 }
